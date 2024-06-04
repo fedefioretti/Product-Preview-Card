@@ -12,13 +12,8 @@
     font-style: normal;
 }
 
-html{
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-body{
+html, body{
+    height: 100%;
     font-family: 'Montserrat', sans-serif;
     background-color: hsl(30, 38%, 92%);
     display: flex;
@@ -29,10 +24,17 @@ body{
     box-sizing: border-box;
 }
 
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .main-container {
     width: 100%;
     height: auto;
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     padding-top: 10rem;
@@ -124,6 +126,7 @@ button.action{
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: relative;
 }
 
 .action {
